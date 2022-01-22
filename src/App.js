@@ -4,6 +4,7 @@ import AboutPage from "./pages/AboutPage";
 import HellowPage from "./pages/HellowPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import UserPage from "./pages/UserPage copy";
 import UsersPage from "./pages/UsersPage";
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/users" element={<UsersPage />} />
+        <Route path="/users/:Id" element={<UserPage/>} />
         <Route path="/hola" element={<HellowPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
