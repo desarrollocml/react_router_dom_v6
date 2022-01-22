@@ -6,7 +6,9 @@ export default function HomePage() {
   return (
     <>
       <h1>Aplication</h1>
-      <Link to={`/users/${userId}`}>usuarios</Link>
+      <Link to={`/users/${userId}`}>usuario</Link>
+      <br/>
+      <Link to="/usuarios">usuarios</Link>
     </>
   );
 }

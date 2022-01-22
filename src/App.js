@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import AboutPage from "./pages/AboutPage";
 import HellowPage from "./pages/HellowPage";
@@ -15,6 +15,9 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/users" element={<UsersPage />} />
         <Route path="/users/:Id" element={<UserPage/>} />
+        <Route path="/usuarios" element={<Navigate to="/users"/>} />
+        {/* si en to="   users" no se coloca oblicua se agrega,
+         queda usuarios/users */}
         <Route path="/hola" element={<HellowPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
