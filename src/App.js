@@ -21,7 +21,10 @@ function App() {
         {/* si en to="   users" no se coloca oblicua se agrega,
          queda usuarios/users */}
         <Route path="/hola" element={<HellowPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/*" element={<Dashboard />}>
+          <Route path="welcome" element={<p>Welcome!</p>}/>
+          <Route path="goodbye" element={<p>Goodbye!</p>}/>
+        </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
