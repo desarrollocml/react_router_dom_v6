@@ -15,7 +15,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/users" element={<UsersPage />} />
         <Route path="/users/:Id" element={<UserPage/>} />
-        <Route path="/usuarios" element={<Navigate to="/users"/>} />
+        <Route path="/usuarios" element={<Navigate replace={false} to="/users"/>} />
         {/* si en to="   users" no se coloca oblicua se agrega,
          queda usuarios/users */}
         <Route path="/hola" element={<HellowPage />} />
